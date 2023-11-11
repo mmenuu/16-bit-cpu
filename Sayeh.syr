@@ -1,0 +1,806 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Sayeh.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Sayeh.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Sayeh"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Sayeh
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\digiCom3\digiProject\register_m.vhd" into library work
+Parsing entity <register_m>.
+Parsing architecture <RTL> of entity <register_m>.
+Parsing VHDL file "D:\digiCom3\digiProject\AL.vhd" into library work
+Parsing entity <AL>.
+Parsing architecture <RTL> of entity <al>.
+Parsing VHDL file "D:\digiCom3\digiProject\WP.vhd" into library work
+Parsing entity <WP>.
+Parsing architecture <RTL> of entity <wp>.
+Parsing VHDL file "D:\digiCom3\digiProject\registerfile.vhd" into library work
+Parsing entity <RFile>.
+Parsing architecture <RTL> of entity <rfile>.
+Parsing VHDL file "D:\digiCom3\digiProject\FR.vhd" into library work
+Parsing entity <FR>.
+Parsing architecture <RTL> of entity <fr>.
+Parsing VHDL file "D:\digiCom3\digiProject\AU.vhd" into library work
+Parsing entity <AU>.
+Parsing architecture <RTL> of entity <au>.
+Parsing VHDL file "D:\digiCom3\digiProject\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <RTL> of entity <alu>.
+Parsing VHDL file "D:\digiCom3\digiProject\Datapath.vhd" into library work
+Parsing entity <datapath>.
+Parsing architecture <RTL> of entity <datapath>.
+Parsing VHDL file "D:\digiCom3\digiProject\CU.vhd" into library work
+Parsing entity <CU>.
+Parsing architecture <RTL> of entity <cu>.
+Parsing VHDL file "D:\digiCom3\digiProject\Sayeh.vhd" into library work
+Parsing entity <Sayeh>.
+Parsing architecture <RTL> of entity <sayeh>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Sayeh> (architecture <RTL>) from library <work>.
+
+Elaborating entity <datapath> (architecture <RTL>) from library <work>.
+
+Elaborating entity <FR> (architecture <RTL>) from library <work>.
+
+Elaborating entity <ALU> (architecture <RTL>) from library <work>.
+
+Elaborating entity <register_m> (architecture <RTL>) with generics from library <work>.
+
+Elaborating entity <WP> (architecture <RTL>) from library <work>.
+
+Elaborating entity <RFile> (architecture <RTL>) from library <work>.
+
+Elaborating entity <AU> (architecture <RTL>) from library <work>.
+
+Elaborating entity <AL> (architecture <RTL>) from library <work>.
+
+Elaborating entity <CU> (architecture <RTL>) from library <work>.
+INFO:HDLCompiler:679 - "D:\digiCom3\digiProject\CU.vhd" Line 251. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Sayeh>.
+    Related source file is "D:\digiCom3\digiProject\Sayeh.vhd".
+    Summary:
+	no macro.
+Unit <Sayeh> synthesized.
+
+Synthesizing Unit <datapath>.
+    Related source file is "D:\digiCom3\digiProject\Datapath.vhd".
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<15>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<14>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<13>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<12>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<11>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<10>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<9>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<8>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<7>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<6>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<5>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<4>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<3>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<2>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<1>> created at line 131
+    Found 1-bit tristate buffer for signal <AddressFromRegBus<0>> created at line 131
+    Found 1-bit tristate buffer for signal <DataBus<15>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<14>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<13>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<12>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<11>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<10>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<9>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<8>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<7>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<6>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<5>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<4>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<3>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<2>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<1>> created at line 135
+    Found 1-bit tristate buffer for signal <DataBus<0>> created at line 135
+    Found 1-bit tristate buffer for signal <OperandBus<7>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<6>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<5>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<4>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<3>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<2>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<1>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<0>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<15>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<14>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<13>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<12>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<11>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<10>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<9>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<8>> created at line 102
+    Found 1-bit tristate buffer for signal <OperandBus<15>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<14>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<13>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<12>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<11>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<10>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<9>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<8>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<7>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<6>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<5>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<4>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<3>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<2>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<1>> created at line 147
+    Found 1-bit tristate buffer for signal <OperandBus<0>> created at line 147
+    Summary:
+	inferred  34 Multiplexer(s).
+	inferred  64 Tristate(s).
+Unit <datapath> synthesized.
+
+Synthesizing Unit <FR>.
+    Related source file is "D:\digiCom3\digiProject\FR.vhd".
+    Found 1-bit register for signal <ZOut>.
+    Found 1-bit register for signal <COut>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <FR> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:\digiCom3\digiProject\ALU.vhd".
+    Found 17-bit adder for signal <A[15]_B[15]_add_5_OUT> created at line 56.
+    Found 17-bit subtractor for signal <B[15]_GND_7_o_sub_8_OUT<16:0>> created at line 1320.
+    Found 17-bit subtractor for signal <B[15]_A[15]_sub_9_OUT<16:0>> created at line 64.
+    Found 8x8-bit multiplier for signal <A[7]_B[7]_MuLt_10_OUT> created at line 69.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[15]_Mux_15_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[14]_Mux_17_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[13]_Mux_19_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[12]_Mux_21_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[11]_Mux_23_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[10]_Mux_25_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[9]_Mux_27_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[8]_Mux_29_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[7]_Mux_31_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[6]_Mux_33_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[5]_Mux_35_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[4]_Mux_37_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[3]_Mux_39_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[2]_Mux_41_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[1]_Mux_43_o> created at line 24.
+    Found 1-bit 9-to-1 multiplexer for signal <OP[3]_C[0]_Mux_45_o> created at line 24.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ZOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <COut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <C<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit comparator equal for signal <B[15]_A[15]_equal_4_o> created at line 44
+    Found 16-bit comparator greater for signal <A[15]_B[15]_LessThan_5_o> created at line 48
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  18 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  20 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <register_m>.
+    Related source file is "D:\digiCom3\digiProject\register_m.vhd".
+        size = 16
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <odata<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  16 Latch(s).
+	inferred  16 Multiplexer(s).
+Unit <register_m> synthesized.
+
+Synthesizing Unit <WP>.
+    Related source file is "D:\digiCom3\digiProject\WP.vhd".
+    Found 6-bit register for signal <osignal>.
+    Found 6-bit adder for signal <osignal[5]_idata[5]_add_0_OUT> created at line 23.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <WP> synthesized.
+
+Synthesizing Unit <RFile>.
+    Related source file is "D:\digiCom3\digiProject\registerfile.vhd".
+    Found 64x16-bit dual-port RAM <Mram_rf> for signal <rf>.
+    Found 6-bit adder for signal <lAdr> created at line 31.
+    Found 6-bit adder for signal <rAdr> created at line 32.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <RFile> synthesized.
+
+Synthesizing Unit <AU>.
+    Related source file is "D:\digiCom3\digiProject\AU.vhd".
+    Summary:
+	no macro.
+Unit <AU> synthesized.
+
+Synthesizing Unit <AL>.
+    Related source file is "D:\digiCom3\digiProject\AL.vhd".
+    Found 16-bit adder for signal <PCIn[15]_GND_48_o_add_0_OUT> created at line 22.
+    Found 16-bit adder for signal <PCIn[15]_GND_48_o_add_1_OUT> created at line 1241.
+    Found 16-bit adder for signal <RegIn[15]_GND_48_o_add_2_OUT> created at line 26.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <AL> synthesized.
+
+Synthesizing Unit <CU>.
+    Related source file is "D:\digiCom3\digiProject\CU.vhd".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8x2-bit Read Only RAM for signal <_n0361>
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cur_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cur_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cur_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   6 Latch(s).
+	inferred  83 Multiplexer(s).
+Unit <CU> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 64x16-bit dual-port RAM                               : 1
+ 8x2-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 7
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 17-bit subtractor                                     : 2
+ 6-bit adder                                           : 3
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 6-bit register                                        : 1
+# Latches                                              : 56
+ 1-bit latch                                           : 56
+# Comparators                                          : 2
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 180
+ 1-bit 2-to-1 multiplexer                              : 150
+ 1-bit 9-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 8
+ 17-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 64
+ 1-bit tristate buffer                                 : 64
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CU>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0361> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cur_state>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RFile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_rf> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <VCC>           | high     |
+    |     addrA          | connected to signal <lAdr>          |          |
+    |     diA            | connected to signal <(_n0056,_n0055)> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 64-word x 16-bit                    |          |
+    |     addrB          | connected to signal <rAdr>          |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RFile> synthesized (advanced).
+
+Synthesizing (advanced) Unit <WP>.
+The following registers are absorbed into accumulator <osignal>: 1 register on signal <osignal>.
+Unit <WP> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 64x16-bit dual-port distributed RAM                   : 1
+ 8x2-bit single-port distributed Read Only RAM         : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 17-bit subtractor                                     : 2
+ 6-bit adder                                           : 2
+# Accumulators                                         : 1
+ 6-bit up accumulator                                  : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 2
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 1
+# Multiplexers                                         : 179
+ 1-bit 2-to-1 multiplexer                              : 149
+ 1-bit 9-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 8
+ 17-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2042 - Unit Sayeh: 16 internal tristates are replaced by logic (pull-up yes): DP1/AddressFromRegBus<0>, DP1/AddressFromRegBus<10>, DP1/AddressFromRegBus<11>, DP1/AddressFromRegBus<12>, DP1/AddressFromRegBus<13>, DP1/AddressFromRegBus<14>, DP1/AddressFromRegBus<15>, DP1/AddressFromRegBus<1>, DP1/AddressFromRegBus<2>, DP1/AddressFromRegBus<3>, DP1/AddressFromRegBus<4>, DP1/AddressFromRegBus<5>, DP1/AddressFromRegBus<6>, DP1/AddressFromRegBus<7>, DP1/AddressFromRegBus<8>, DP1/AddressFromRegBus<9>.
+WARNING:Xst:2040 - Unit Sayeh: 16 multi-source signals are replaced by logic (pull-up yes): DP1/OperandBus<0>, DP1/OperandBus<10>, DP1/OperandBus<11>, DP1/OperandBus<12>, DP1/OperandBus<13>, DP1/OperandBus<14>, DP1/OperandBus<15>, DP1/OperandBus<1>, DP1/OperandBus<2>, DP1/OperandBus<3>, DP1/OperandBus<4>, DP1/OperandBus<5>, DP1/OperandBus<6>, DP1/OperandBus<7>, DP1/OperandBus<8>, DP1/OperandBus<9>.
+
+Optimizing unit <Sayeh> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <FR> ...
+
+Optimizing unit <register_m> ...
+
+Optimizing unit <AL> ...
+
+Optimizing unit <CU> ...
+WARNING:Xst:2677 - Node <DP1/ArithmeticUnit/ZOut> of sequential type is unconnected in block <Sayeh>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <DP1/ArithmeticUnit/COut> is unconnected in block <Sayeh>.
+Found area constraint ratio of 100 (+ 5) on block Sayeh, actual ratio is 9.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Sayeh.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 461
+#      GND                         : 1
+#      INV                         : 15
+#      LUT1                        : 1
+#      LUT2                        : 15
+#      LUT3                        : 39
+#      LUT4                        : 59
+#      LUT5                        : 93
+#      LUT6                        : 100
+#      MUXCY                       : 65
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 70
+# FlipFlops/Latches                : 62
+#      FD                          : 1
+#      FDRE                        : 6
+#      FDS                         : 1
+#      LD                          : 22
+#      LDE                         : 32
+# RAMS                             : 16
+#      RAM64X1D                    : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IOBUF                       : 16
+#      OBUF                        : 18
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              62  out of  11440     0%  
+ Number of Slice LUTs:                  354  out of   5720     6%  
+    Number used as Logic:               322  out of   5720     5%  
+    Number used as Memory:               32  out of   1440     2%  
+       Number used as RAM:               32
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    363
+   Number with an unused Flip Flop:     301  out of    363    82%  
+   Number with an unused LUT:             9  out of    363     2%  
+   Number of fully used LUT-FF pairs:    53  out of    363    14%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  35  out of    102    34%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                                   | Clock buffer(FF name)          | Load  |
+-------------------------------------------------------------------------------+--------------------------------+-------+
+clk                                                                            | BUFGP                          | 59    |
+DP1/ArithmeticUnit/_n0099<0>(DP1/ArithmeticUnit/_n0099<0>1:O)                  | NONE(*)(DP1/ArithmeticUnit/C_0)| 16    |
+CU1/cur_state[2]_PWR_40_o_Mux_79_o(CU1/Mmux_cur_state[2]_PWR_40_o_Mux_79_o11:O)| NONE(*)(CU1/next_state_2)      | 3     |
+-------------------------------------------------------------------------------+--------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 12.357ns (Maximum Frequency: 80.926MHz)
+   Minimum input arrival time before clock: 2.326ns
+   Maximum output required time after clock: 12.469ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.357ns (frequency: 80.926MHz)
+  Total number of paths / destination ports: 30861 / 293
+-------------------------------------------------------------------------
+Delay:               6.179ns (Levels of Logic = 14)
+  Source:            DP1/WindowPointer/osignal_4 (FF)
+  Destination:       DP1/AddressingUnit/ProgramCounter/odata_15 (LATCH)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: DP1/WindowPointer/osignal_4 to DP1/AddressingUnit/ProgramCounter/odata_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   0.912  DP1/WindowPointer/osignal_4 (DP1/WindowPointer/osignal_4)
+     LUT3:I0->O            2   0.205   0.617  DP1/RegisterFile/Madd_lAdr_xor<5>111_SW0 (N84)
+     LUT6:I5->O           16   0.205   1.004  DP1/RegisterFile/Madd_lAdr_xor<5>11 (DP1/RegisterFile/lAdr<5>)
+     RAM64X1D:A5->SPO     19   0.205   1.072  DP1/RegisterFile/Mram_rf8 (DP1/RD<7>)
+     LUT6:I5->O            1   0.205   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_lut<7> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_lut<7>)
+     MUXCY:S->O            1   0.172   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<7> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<8> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<9> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<10> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<11> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<12> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<13> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<14> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<14>)
+     XORCY:CI->O           1   0.180   0.580  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_xor<15> (DP1/AddressingUnit/AddressLogic/PCIn[15]_PCIn[15]_mux_6_OUT<15>)
+     LUT4:I3->O            3   0.205   0.000  DP1/AddressingUnit/AddressLogic/Mmux_ALOut71 (addressbus_15_OBUF)
+     LDE:D                     0.037          DP1/AddressingUnit/ProgramCounter/odata_15
+    ----------------------------------------
+    Total                      6.179ns (1.994ns logic, 4.185ns route)
+                                       (32.3% logic, 67.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              2.326ns (Levels of Logic = 2)
+  Source:            databus<15> (PAD)
+  Destination:       DP1/InstructionRegister/odata_15 (LATCH)
+  Destination Clock: clk falling
+
+  Data Path: databus<15> to DP1/InstructionRegister/odata_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   1.222   0.864  databus_15_IOBUF (N52)
+     LUT4:I0->O            1   0.203   0.000  DP1/InstructionRegister/Mmux_odata[15]_GND_27_o_MUX_97_o11 (DP1/InstructionRegister/odata[15]_GND_27_o_MUX_97_o)
+     LDE:D                     0.037          DP1/InstructionRegister/odata_15
+    ----------------------------------------
+    Total                      2.326ns (1.462ns logic, 0.864ns route)
+                                       (62.8% logic, 37.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DP1/ArithmeticUnit/_n0099<0>'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.795ns (Levels of Logic = 2)
+  Source:            DP1/ArithmeticUnit/C_15 (LATCH)
+  Destination:       databus<15> (PAD)
+  Source Clock:      DP1/ArithmeticUnit/_n0099<0> falling
+
+  Data Path: DP1/ArithmeticUnit/C_15 to databus<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.944  DP1/ArithmeticUnit/C_15 (DP1/ArithmeticUnit/C_15)
+     LUT6:I0->O            1   0.203   0.579  DP1/Mmux_Z_5_o_Address[15]_MUX_182_o11 (databus_15_IOBUF)
+     IOBUF:I->IO               2.571          databus_15_IOBUF (databus<15>)
+    ----------------------------------------
+    Total                      4.795ns (3.272ns logic, 1.523ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 57149 / 34
+-------------------------------------------------------------------------
+Offset:              12.469ns (Levels of Logic = 23)
+  Source:            DP1/InstructionRegister/odata_15 (LATCH)
+  Destination:       databus<15> (PAD)
+  Source Clock:      clk falling
+
+  Data Path: DP1/InstructionRegister/odata_15 to databus<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q             19   0.498   1.319  DP1/InstructionRegister/odata_15 (DP1/InstructionRegister/odata_15)
+     LUT4:I0->O           22   0.203   1.362  CU1/_n0129<7>1 (CU1/_n0129)
+     LUT5:I2->O           17   0.205   1.372  CU1/Mmux_RplusI11 (RplusI)
+     LUT5:I0->O            1   0.203   0.684  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_A8_SW1_SW0 (N125)
+     LUT6:I4->O            1   0.203   0.827  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_A8_SW1 (N96)
+     LUT6:I2->O            1   0.203   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_lut<1> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<1> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<2> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<3> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<4> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<5> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<6> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<7> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<8> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<9> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<10> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<11> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<12> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<13> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<14> (DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_cy<14>)
+     XORCY:CI->O           1   0.180   0.580  DP1/AddressingUnit/AddressLogic/Mmux_PCIn[15]_PCIn[15]_mux_6_OUT_rs_xor<15> (DP1/AddressingUnit/AddressLogic/PCIn[15]_PCIn[15]_mux_6_OUT<15>)
+     LUT4:I3->O            3   0.205   0.651  DP1/AddressingUnit/AddressLogic/Mmux_ALOut71 (addressbus_15_OBUF)
+     LUT6:I5->O            1   0.205   0.579  DP1/Mmux_Z_5_o_Address[15]_MUX_182_o11 (databus_15_IOBUF)
+     IOBUF:I->IO               2.571          databus_15_IOBUF (databus<15>)
+    ----------------------------------------
+    Total                     12.469ns (5.095ns logic, 7.374ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CU1/cur_state[2]_PWR_40_o_Mux_79_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.841|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock DP1/ArithmeticUnit/_n0099<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   10.332|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+CU1/cur_state[2]_PWR_40_o_Mux_79_o|         |         |    1.114|         |
+clk                               |    5.027|    5.032|    8.499|         |
+----------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.87 secs
+ 
+--> 
+
+Total memory usage is 4503720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -66,10 +66,15 @@ begin
 				  C <= TMP(15 downto 0);
 				when "1001" =>
 				  --Multiplication
-				  --C <= std_logic_vector(signed(A(7 downto 0)) * signed(B(7 downto 0)));
+					C <= std_logic_vector(signed(A(7 downto 0)) * signed(B(7 downto 0)));
 				when "1010" =>
 				  --Division (Needs work)
-				  --C <= std_logic_vector(signed(A(7 downto 0)) / signed(B(7 downto 0)));
+					 --C <= (others => '0'); -- Initialize C to zero
+					 --for i in 15 downto 0 loop
+						  --C <= C(14 downto 0) & '1' when (signed(A) >= signed(B)) else C(14 downto 0) & '0';
+						  --A <= '0' & A(15 downto 1) when (signed(A) >= signed(B)) else A;
+					 --end loop;
+
 				when "1011" => 
 				  --Squre Root (Needs work)
 				  
